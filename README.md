@@ -1,8 +1,7 @@
-[![BCH compliance](https://bettercodehub.com/edge/badge/sreerampr/ecmascrypt?branch=master)](https://bettercodehub.com/)
+[![Build Status](https://travis-ci.org/sreerampr/ecmascrypt.svg?branch=master)](https://travis-ci.org/sreerampr/ecmascrypt)
 [![codecov](https://codecov.io/gh/sreerampr/ecmascrypt/branch/master/graph/badge.svg)](https://codecov.io/gh/sreerampr/ecmascrypt)
-[![Maintainability](https://api.codeclimate.com/v1/badges/2f0c56c3135cdf0ab74e/maintainability)](https://codeclimate.com/github/sreerampr/ecmascrypt/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/2f0c56c3135cdf0ab74e/test_coverage)](https://codeclimate.com/github/sreerampr/ecmascrypt/test_coverage)
-[![Build Status](https://travis-ci.org/sreerampr/ecmascrypt.svg?branch=develop)](https://travis-ci.org/sreerampr/ecmascrypt)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ee15c93b8d04a9af62c5/maintainability)](https://codeclimate.com/github/sreerampr/ecmascrypt/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ee15c93b8d04a9af62c5/test_coverage)](https://codeclimate.com/github/sreerampr/ecmascrypt/test_coverage)
 
 # pipeline
 The ultimate pipeline boilerplate
