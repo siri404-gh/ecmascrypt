@@ -25,6 +25,7 @@ script:
 - yarn prod-firebase
 - yarn pa11y
 - yarn sitespeed
+- yarn bdd
 - yarn firebase-deploy
 services:
 - docker
