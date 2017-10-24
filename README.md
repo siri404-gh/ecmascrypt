@@ -49,6 +49,7 @@ The ultimate pipeline boilerplate
 * FIREBASE_TOKEN
 * HEROKU_API_KEY
 * HEROKU_APP_NAME
+* NODE_ENV
 
 # Technologies Used
 * Git + Github/Gitlab
