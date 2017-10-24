@@ -6,10 +6,10 @@
   "author": "Sreeram Padmanabhan <sreeram.com@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "expect": "^21.2.1",
-    "jest": "^21.2.1"
   },
   "devDependencies": {
+    "expect": "^21.2.1",
+    "jest": "^21.2.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
