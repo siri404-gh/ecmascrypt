@@ -10,7 +10,7 @@ module.exports = {
   resolveExtensions: ['.js', '.json', '.jsx'],
   sourceMapType: 'inline-source-map',
   htmlTemplateTitle: 'Development',
-  htmlTemplateFile: 'index.ejs',
+  htmlTemplateFile: 'config/index.ejs',
   firebase: {
     htmlTemplateTitle: 'Firebase Title',
   },

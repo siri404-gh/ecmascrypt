@@ -1,9 +1,9 @@
-var webpackConfig = require('./webpack/webpack.dev');
-var { karma_files, karma_preprocessors, karma_coverage_reporters, karma_coverage_dir, karma_browsers } = require('./variables/karma');
+var webpackConfig = require('../webpack/webpack.dev');
+var { karma_files, karma_preprocessors, karma_coverage_reporters, karma_coverage_dir, karma_browsers } = require('../variables/karma');
 
 module.exports = function (config) {
   config.set({
-    basePath: '',
+    basePath: '..',
     frameworks: ['jasmine'],
     files: karma_files,
     preprocessors: {
