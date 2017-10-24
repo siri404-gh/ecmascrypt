@@ -58,6 +58,7 @@ The ultimate pipeline boilerplate
 * :white_check_mark: React
 * :white_check_mark: React Native
 * Bootstrap
+* Material UI
 * :white_check_mark: Redux
 * :white_check_mark: JSDoc
 * :white_check_mark: Express + Morgan
@@ -75,13 +76,14 @@ The ultimate pipeline boilerplate
 * :white_check_mark: Heroku deployment
 * :white_check_mark: Eslint
 * :white_check_mark: Editorconfig
+* :white_check_mark: Slack notification from - Github/Travis/Docker/Heroku
+* Socket.io
+* Passport
+* Nodemailer
+* Pug
+* Marked
+* Graphicsmagick
+* Appdynamics
 * Google Analytics
 * Google Adsense
 * Google Pagespeed
-* :white_check_mark: Slack notification from - Github/Travis/Docker/Heroku
-<!-- socket.io
-passport
-nodemailer
-pug
-marked
-graphicsmagick -->
