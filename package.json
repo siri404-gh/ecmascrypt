@@ -77,7 +77,7 @@
   "jest": {
     "preset": "react-native",
     "testMatch": [
-      "**/tests/**/*.js?(x)"
+      "**/src/components/mobile/**/*.test.js?(x)"
     ]
   },
   "engines": {

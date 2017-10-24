@@ -1,4 +1,4 @@
-const { src, tests } = require('./common');
+const { src } = require('./common');
 
 module.exports = {
   src,
@@ -9,6 +9,5 @@ module.exports = {
   twitter: '',
   site: '',
   image: '',
-  tests,
   interfaces:  ["describe", "it", "context", "suite", "test"],
 };

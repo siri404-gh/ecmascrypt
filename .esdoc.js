@@ -1,4 +1,4 @@
-const { src, docs, site, github, description, title, twitter, image, tests, interfaces } = require('./variables/esdoc');
+const { src, docs, site, github, description, title, twitter, image, interfaces } = require('./variables/esdoc');
 
 module.exports = JSON.parse(JSON.stringify({
   "source": src,
@@ -24,7 +24,7 @@ module.exports = JSON.parse(JSON.stringify({
         "image": image
       },
       "test": {
-        "source": tests,
+        "source": src,
         "interfaces": interfaces,
         "includes": ["(spec|Spec|test|Test)\\.js$"],
         "excludes": ["\\.config\\.js$"]

@@ -9,6 +9,10 @@ module.exports = function (config) {
     preprocessors: {
       './**/*.test.js': karma_preprocessors
     },
+    exclude: [
+      'src/**/*.android.test.js',
+      'src/**/*.ios.test.js'
+    ],
     webpack: webpackConfig,
     reporters: karma_coverage_reporters,
     coverageReporter: {

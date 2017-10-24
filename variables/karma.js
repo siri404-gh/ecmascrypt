@@ -1,4 +1,4 @@
-const { src, docs, tests } = require('./common');
+const { src, docs } = require('./common');
 
 module.exports = {
   karma_files: [ src + '/**/*.test.js'],
