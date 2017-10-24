@@ -13,7 +13,7 @@ var createBrowserStackSession = function(config, caps){
     usingServer('http://'+config.server+'/wd/hub').
     withCapabilities(caps).
     build();
-}
+};
 
 var myHooks = function () {
   var bs_local = null;
