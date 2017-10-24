@@ -1,6 +1,6 @@
 exports.config = {
-  user: 'sreerampadmanabh1',
-  key: 'K6mzWBTF1sCipMBTuggm',
+  user: 'BROWSERSTACK_USER',
+  key: 'BROWSERSTACK_KEY',
   server: 'hub-cloud.browserstack.com',
 
   commonCapabilities: {

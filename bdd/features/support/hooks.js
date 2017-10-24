@@ -1,5 +1,6 @@
 var webdriver = require('selenium-webdriver');
 var browserstack = require('browserstack-local');
+var reporter = require('cucumber-html-reporter');
 
 var config_file = '../../conf/' + (process.env.CONFIG_FILE || 'single') + '.conf.js';
 var config = require(config_file).config;
@@ -42,9 +43,7 @@ var myHooks = function () {
 
   this.After(function(scenario, callback){
     this.driver.quit().then(function(){
-      if(bs_local){
-        bs_local.stop(callback);
-      }
+      if(bs_local) bs_local.stop(callback);
       else callback();
     });
   });
