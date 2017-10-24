@@ -79,3 +79,9 @@ The ultimate pipeline boilerplate
 * Google Adsense
 * Google Pagespeed
 * Slack notification from - Github/Travis/Docker/Heroku
+<!-- socket.io
+passport
+nodemailer
+pug
+marked
+graphicsmagick -->
