@@ -17,3 +17,4 @@ var options = {
 };
 
 reporter.generate(options);
+return true;
