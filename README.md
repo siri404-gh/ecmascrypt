@@ -52,33 +52,33 @@ The ultimate pipeline boilerplate
 * NODE_ENV
 
 # Technologies Used
-* Git + Github/Gitlab
-* Node JS
-* Yarn/Npm
-* React
-* React Native
+* :white_check_mark: Git + Github/Gitlab
+* :white_check_mark: Node JS
+* :white_check_mark: Yarn/Npm
+* :white_check_mark: React
+* :white_check_mark: React Native
 * Bootstrap
-* Redux
-* JSDoc
-* Express + Morgan
-* Webpack
-* Karma + Jasmine
-* Jest
-* Code Quality Reporting
-* Code Coverage Reporting
-* Travis CI
-* BDD using Cucumber + Browserstack
-* Pa11y Accessibility Testing
-* Sitespeed Performance Testing
-* Firebase Deployment
-* Docker
-* Heroku deployment
-* Eslint
-* Editorconfig
+* :white_check_mark: Redux
+* :white_check_mark: JSDoc
+* :white_check_mark: Express + Morgan
+* :white_check_mark: Webpack
+* :white_check_mark: Karma + Jasmine
+* :white_check_mark: Jest
+* :white_check_mark: Code Quality Reporting
+* :white_check_mark: Code Coverage Reporting
+* :white_check_mark: Travis CI
+* :white_check_mark: BDD using Cucumber + Browserstack
+* :white_check_mark: Pa11y Accessibility Testing
+* :white_check_mark: Sitespeed Performance Testing
+* :white_check_mark: Firebase Deployment
+* :white_check_mark: Docker
+* :white_check_mark: Heroku deployment
+* :white_check_mark: Eslint
+* :white_check_mark: Editorconfig
 * Google Analytics
 * Google Adsense
 * Google Pagespeed
-* Slack notification from - Github/Travis/Docker/Heroku
+* :white_check_mark: Slack notification from - Github/Travis/Docker/Heroku
 <!-- socket.io
 passport
 nodemailer
