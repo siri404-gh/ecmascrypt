@@ -5,7 +5,9 @@
   "repository": "https://github.com/sreerampr/ecmascrypt.git",
   "author": "Sreeram Padmanabhan <sreeram.com@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "flow-bin": "^0.57.3"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -22,7 +24,6 @@
     "expect": "^21.2.1",
     "express": "^4.16.2",
     "firebase-tools": "^3.13.1",
-    "flow-bin": "^0.57.3",
     "html-webpack-plugin": "^2.30.1",
     "jasmine-core": "^2.8.0",
     "jest": "^21.2.1",
