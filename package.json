@@ -61,7 +61,7 @@
   "scripts": {
     "start:web:dev": "./node_modules/.bin/webpack-dev-server --config=./webpack/webpack.config.js --env=dev --progress --profile --colors --open",
     "flow": "./node_modules/.bin/flow --json --pretty --quiet",
-    "lint": "./node_modules/.bin/eslint .",
+    "lint": "mkdir -p output/reports/eslint && ./node_modules/.bin/eslint . -o=output/reports/eslint/index.txt",
     "test": "./node_modules/.bin/karma start .karma.conf.js",
     "report-coverage": "./node_modules/.bin/codecov -t $CODECOV_KEY",
     "docs": "./node_modules/.bin/esdoc",

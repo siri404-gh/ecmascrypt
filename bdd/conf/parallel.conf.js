@@ -17,7 +17,7 @@ exports.config = {
   },{
     browserName: 'internet explorer'
   }]
-}
+};
 
 // Code to support common capabilities
 exports.config.capabilities.forEach(function(caps){

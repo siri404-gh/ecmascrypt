@@ -7,4 +7,4 @@ exports.config = {
     browserName: 'chrome',
     'browserstack.debug': true
   }]
-}
+};
