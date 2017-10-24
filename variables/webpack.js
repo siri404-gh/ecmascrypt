@@ -13,5 +13,8 @@ module.exports = {
   htmlTemplateFile: 'index.ejs',
   firebase: {
     htmlTemplateTitle: 'Firebase Title',
+  },
+  heroku: {
+    htmlTemplateTitle: 'Heroku Title',
   }
 };

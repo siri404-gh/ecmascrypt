@@ -63,6 +63,7 @@
     "pa11y": "mkdir -p ./output/reports/.pa11y && ./node_modules/.bin/pa11y-ci --config .pa11yrc --threshold 5 --json > ./output/reports/.pa11y/output.json",
     "sitespeed": "./node_modules/.bin/sitespeed.io --outputFolder=./output/reports/.sitespeed --config=.sitespeed.json .sitespeed.txt",
     "prod": "./node_modules/.bin/webpack --config=./webpack/webpack.config.js --env=prod",
+    "prod-firebase": "./node_modules/.bin/webpack --config=./webpack/webpack.config.js --env=firebase",
     "start": "npm run docs && npm run test && npm run pa11y && npm run sitespeed && npm run prod && node server/server",
     "firebase-deploy": "./node_modules/.bin/firebase deploy --token $FIREBASE_TOKEN",
     "cleanup": "./node_modules/.bin/rimraf android/app/src/main/assets android ios output TMPDIR/react-* node_modules && yarn",
