@@ -39,6 +39,7 @@ The ultimate pipeline boilerplate
 * docker stop $(docker ps -aq)
 * docker rm $(docker ps -aq)
 * docker rmi <imageID>
+* docker run -p5000:5000 --rm -it sreeram/ecmascrypt:latest
 
 # Environment variables
 * CODECOV_KEY
@@ -57,8 +58,6 @@ The ultimate pipeline boilerplate
 * :white_check_mark: Yarn/Npm
 * :white_check_mark: React
 * :white_check_mark: React Native
-* Bootstrap
-* Material UI
 * :white_check_mark: Redux
 * :white_check_mark: JSDoc
 * :white_check_mark: Express + Morgan
@@ -77,6 +76,8 @@ The ultimate pipeline boilerplate
 * :white_check_mark: Eslint
 * :white_check_mark: Editorconfig
 * :white_check_mark: Slack notification from - Github/Travis/Docker/Heroku
+* Bootstrap
+* Material UI
 * Socket.io
 * Passport
 * Nodemailer
