@@ -74,7 +74,6 @@
     "cucumber": "mkdir -p output/reports/.cucumber && CONFIG_FILE=single ./node_modules/cucumber/bin/cucumber.js bdd/features/single.feature -f json:output/reports/.cucumber/output.json && node cucumber-reporter",
     "prod": "./node_modules/.bin/webpack --config=./webpack/webpack.config.js --env=prod",
     "prod-firebase": "./node_modules/.bin/webpack --config=./webpack/webpack.config.js --env=firebase",
-    "start": "npm run lint && npm run test && npm run docs && npm run pa11y && npm run sitespeed && npm run cucumber && npm run prod && node server/server",
     "firebase-deploy": "./node_modules/.bin/firebase deploy --token $FIREBASE_TOKEN",
     "cleanup": "./node_modules/.bin/rimraf android/app/src/main/assets android ios output TMPDIR/react-* node_modules && yarn",
     "eject": "react-native eject",
@@ -83,7 +82,9 @@
     "start:mobile:server": "node node_modules/react-native/local-cli/cli.js start -- --reset-cache",
     "start:mobile:dev": "react-native run-android",
     "start:mobile:dev:ios": "react-native run-ios",
-    "test:mobile": "./node_modules/.bin/jest"
+    "test:mobile": "./node_modules/.bin/jest",
+    "sanity": "yarn flow && yarn lint && yarn test && yarn docs && yarn pa11y && yarn sitespeed",
+    "start": "npm run lint && npm run test && npm run docs && npm run pa11y && npm run sitespeed && npm run cucumber && npm run prod && node server/server"
   },
   "jest": {
     "preset": "react-native",
