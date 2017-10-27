@@ -38,6 +38,11 @@ module.exports = Merge(CommonConfig, {
       title: htmlTemplateTitle,
       template: htmlTemplateFile
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('DEVELOPMENT')
+      }
+    })
   ]
 });

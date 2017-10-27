@@ -14,4 +14,19 @@ class App extends Component {
   }
 };
 
+if (process.env.NODE_ENV === 'DEVELOPMENT') {
+
+  {
+    let createClass = React.createClass;
+    Object.defineProperty(React, 'createClass', {
+      set: (nextCreateClass) => {
+        createClass = nextCreateClass;
+      }
+    });
+}
+
+  const {whyDidYouUpdate} = require('why-did-you-update')
+  whyDidYouUpdate(React)
+}
+
 export default App;
