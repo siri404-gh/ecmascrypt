@@ -23,10 +23,10 @@ if (process.env.NODE_ENV === 'DEVELOPMENT') {
         createClass = nextCreateClass;
       }
     });
-}
+  }
 
-  const {whyDidYouUpdate} = require('why-did-you-update')
-  whyDidYouUpdate(React)
+  const { whyDidYouUpdate } = require('why-did-you-update');
+  whyDidYouUpdate(React);
 }
 
 export default App;
