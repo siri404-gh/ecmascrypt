@@ -25,10 +25,10 @@ script:
 - yarn sitespeed
 - yarn cucumber
 - yarn prod-firebase
-- test "$TRAVIS_BRANCH" = "develop" && yarn firebase-deploy
 services:
 - docker
 after_success:
+- yarn firebase-deploy
 - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
 - test "$TRAVIS_BRANCH" = "master" && docker push $DOCKER_REPO;
 - test "$TRAVIS_BRANCH" = "master" && sh ./travis/deploy_heroku.sh
