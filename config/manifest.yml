@@ -5,3 +5,4 @@ applications:
   name: ecmascrypt
   host: ecmascrypt
   disk_quota: 2048M
+  health-check-type: none

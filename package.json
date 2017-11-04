@@ -93,7 +93,7 @@
     "start:mobile:dev:ios": "react-native run-ios",
     "test:mobile": "./node_modules/.bin/jest",
     "docker:build": "docker build -t $DOCKER_REPO .",
-    "docker:run": "docker run -p $PORT:$PORT -d $DOCKER_REPO",
+    "docker:run": "docker run -p 5000:5000 -d $DOCKER_REPO",
     "docker:login": "docker login -u='$DOCKER_USERNAME' -p='$DOCKER_PASSWORD'",
     "docker:push": "docker push $DOCKER_REPO",
     "heroku:deploy": "sh ./travis/deploy_heroku.sh",
