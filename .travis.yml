@@ -14,17 +14,26 @@ before_install:
 - sudo dpkg -i google-chrome*.deb
 cache: yarn
 script:
+- yarn figlet -- 'Travis Process'
 - yarn travis
 services:
 - docker
 after_success:
+- yarn figlet -- 'Firebase Deploy'
 - yarn firebase-deploy
+- yarn figlet -- 'Docker Build'
 - test "$TRAVIS_BRANCH" = "master" && yarn docker:build
+- yarn figlet -- 'Docker Run'
 - test "$TRAVIS_BRANCH" = "master" && yarn docker:run
+- yarn figlet -- 'Pa11y & Sitespeed'
 - test "$TRAVIS_BRANCH" = "master" && yarn pa11y && yarn sitespeed
+- yarn figlet -- 'Docker Login'
 - test "$TRAVIS_BRANCH" = "master" && yarn docker:login
+- yarn figlet -- 'Docker Push'
 - test "$TRAVIS_BRANCH" = "master" && yarn docker:push
+- yarn figlet -- 'Heroku Deploy'
 - test "$TRAVIS_BRANCH" = "master" && yarn heroku:deploy
+- yarn figlet -- 'Bluemix Deploy'
 deploy:
   provider: bluemixcloudfoundry
   skip_cleanup: true

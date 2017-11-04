@@ -6,6 +6,9 @@
   "author": "Sreeram Padmanabhan <sreeram.com@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@storybook/addon-actions": "^3.2.14",
+    "@storybook/addon-links": "^3.2.14",
+    "@storybook/react": "^3.2.14",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
@@ -25,6 +28,7 @@
     "eslint": "^4.9.0",
     "expect": "^21.2.1",
     "express": "^4.16.2",
+    "figlet-cli": "^0.1.0",
     "firebase-tools": "^3.13.1",
     "flow-bin": "^0.57.3",
     "html-webpack-plugin": "^2.30.1",
@@ -58,10 +62,7 @@
     "webpack-dev-server": "^2.9.3",
     "webpack-manifest-plugin": "^1.3.2",
     "webpack-merge": "^4.1.0",
-    "why-did-you-update": "^0.0.8",
-    "@storybook/addon-actions": "^3.2.14",
-    "@storybook/addon-links": "^3.2.14",
-    "@storybook/react": "^3.2.14"
+    "why-did-you-update": "^0.0.8"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
@@ -78,16 +79,13 @@
     "cucumber": "mkdir -p output/reports/.cucumber && CONFIG_FILE=single ./node_modules/cucumber/bin/cucumber.js bdd/features/single.feature -f json:output/reports/.cucumber/output.json && node cucumber-reporter",
     "sanity:dev": "yarn flow && yarn lint:dev && yarn test && yarn docs && yarn sitespeed",
     "storybook": "./node_modules/.bin/start-storybook -p 6006",
-
     "lint": "mkdir -p output/reports/.eslint && ./node_modules/.bin/eslint . -c=config/.eslintrc --ignore-path=config/.eslintignore -o=output/reports/.eslint/index.html -f=html",
     "pa11y": "mkdir -p ./output/reports/.pa11y && ./node_modules/.bin/pa11y-ci --config config/.pa11yrc --threshold 5 --json > ./output/reports/.pa11y/output.json",
     "build-storybook": "build-storybook -o output/storybook",
     "prod:build": "./node_modules/.bin/webpack --config=./webpack/webpack.config.js --env=prod",
     "firebase:build": "./node_modules/.bin/webpack --config=./webpack/webpack.config.js --env=firebase",
     "firebase-deploy": "./node_modules/.bin/firebase deploy --token $FIREBASE_TOKEN",
-
     "cleanup": "./node_modules/.bin/rimraf android ios output TMPDIR/react-* node_modules && yarn && yarn eject",
-
     "eject": "react-native eject",
     "bundle": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
     "sanity:mobile": "yarn cleanup && mkdir android/app/src/main/assets && yarn bundle && yarn cleanup",
@@ -95,14 +93,13 @@
     "start:mobile:dev": "react-native run-android",
     "start:mobile:dev:ios": "react-native run-ios",
     "test:mobile": "./node_modules/.bin/jest",
-
     "docker:build": "docker build -t $DOCKER_REPO .",
     "docker:run": "docker run -p 5000:5000 -d $DOCKER_REPO",
     "docker:login": "docker login -u='$DOCKER_USERNAME' -p='$DOCKER_PASSWORD'",
     "docker:push": "docker push $DOCKER_REPO",
     "heroku:deploy": "sh ./travis/deploy_heroku.sh",
-
-    "start": "npm run lint && npm run test && npm run docs && npm run cucumber && npm run build-storybook && npm run prod:build && node server/server",
+    "figlet": " ./node_modules/.bin/figlet --f 'Straight'",
+    "start": "npm run build-storybook && npm run prod:build && node server/server",
     "travis": "yarn flow && yarn lint && yarn docs && yarn test && yarn report-coverage && yarn cucumber && yarn firebase:build"
   },
   "jest": {
