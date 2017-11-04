@@ -35,3 +35,4 @@ Building using Travis CI
 Creating a node server with Express and morgan
 Helmet
 Authentication with Passport
+Using firebase functions
