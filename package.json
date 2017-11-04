@@ -102,7 +102,7 @@
     "docker:push": "docker push $DOCKER_REPO",
     "heroku:deploy": "sh ./travis/deploy_heroku.sh",
 
-    "start": "npm run lint && npm run test && npm run docs && npm run pa11y && npm run sitespeed && npm run cucumber && npm run build-storybook && npm run prod:build && node server/server",
+    "start": "npm run lint && npm run test && npm run docs && npm run cucumber && npm run build-storybook && npm run prod:build && node server/server",
     "travis": "yarn flow && yarn lint && yarn docs && yarn test && yarn report-coverage && yarn cucumber && yarn firebase:build"
   },
   "jest": {
