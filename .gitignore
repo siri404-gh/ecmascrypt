@@ -1,6 +1,7 @@
 .dist
 reports
 .env.sh
+output
 
 # OSX
 .DS_Store

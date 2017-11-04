@@ -22,6 +22,7 @@ app.use('/pa11y', express.static(output));
 app.use('/sitespeed', express.static(sitespeedDir));
 app.use('/eslint', express.static('output/reports/.eslint'));
 app.use('/cucumber', express.static(report));
+app.use('/storybook', express.static('output/storybook'));
 
 app.listen(port);
 

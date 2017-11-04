@@ -2,7 +2,7 @@ const { src } = require('./common');
 
 module.exports = {
   src,
-  docs: './output/reports/.docs',
+  docs: './output/docs',
   title: 'Title',
   description: 'Description',
   github: '',

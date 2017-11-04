@@ -2,10 +2,10 @@ const webpack = require('webpack');
 const path = require('path');
 const Merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CommonConfig = require('./webpack.common.js');
 
 const { entry, dist, devPort, sourceMapType, outputFileName, htmlTemplateFile, htmlTemplateTitle } = require('../variables/webpack');
+const { metaDescription, metaImage, metaTitle, metaType, metaURL } = require('../variables/common');
 
 module.exports = Merge(CommonConfig, {
   devtool: sourceMapType,
@@ -29,14 +29,14 @@ module.exports = Merge(CommonConfig, {
     // }
   },
   plugins: [
-    // new CleanWebpackPlugin([ 'output',  logs], {
-    //   root: path.join(__dirname, '..'),
-    //   verbose: true,
-    //   dry: false
-    // }),
     new HtmlWebpackPlugin({
       title: htmlTemplateTitle,
-      template: htmlTemplateFile
+      template: htmlTemplateFile,
+      metaType,
+      metaURL,
+      metaDescription,
+      metaImage,
+      metaTitle
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({

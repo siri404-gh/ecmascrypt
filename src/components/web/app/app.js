@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header title='title' />
+        <Header title='firebase' />
         <Content />
         <Loader />
       </div>
