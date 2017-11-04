@@ -21,7 +21,6 @@ services:
 - docker
 after_success:
 - yarn firebase-deploy
-- test "$TRAVIS_BRANCH" = "master" && yarn pa11y && yarn sitespeed
 - test "$TRAVIS_BRANCH" = "master" && yarn docker:login
 - test "$TRAVIS_BRANCH" = "master" && yarn docker:push
 - test "$TRAVIS_BRANCH" = "master" && yarn heroku:deploy
@@ -36,6 +35,8 @@ deploy:
   password: $BLUEMIX_PASSWORD
   organization: $BLUEMIX_ORGANIZATION
   space: $BLUEMIX_SPACE
+  on:
+    branch: master
 notifications:
   slack:
     secure: k/tJMcUD85O/5t3DN2KwnNLRPpHZpyK8hnhNz9gElhQ8Zg5hNMjwuC0nyNdj8+XNZMqHJUftg+LADxGV0pXXV7G5bGisWeXWzTd1cmzed0UzlJDyTNEnTT/LeNI/0e8ckmvtold67oH5X7TrUH4Mr9RTu6RY2iyxCKB6IGbs6BsM5CijiU6gtyptVn1dT1Xq6YVJfNl2G4R+/UEiYHbpNNDNJ2k9poTFswQwymR+5zeeYUYpQ4hg2uNVBE6ZSk4Nn9mMN7Bv9JM75MlgD9I4M8Nrfyen9LnGCsie9C9J6ZtDFmLFeOodYlQQc1o7FzRptQ98eTrrTxOnl1v5za9sbfhRfj2yt9YiEoLVhyWloYeBP+r8/rJRSDa9H4/NMhdAGgs5S9x0fWDo2FN6bTChpT9OdsLyoCX6haonrZEBrqi3bbvdAbtu5XwcDPwtIRrQ+/O4PH/fBqwGwI1Ak+K14Tr9UC1UaJix9u760FlpwXkP4WvQFdp0QzIGyV4nDT9NExiVFED01Tfp1uPWcpkKIJE3zizFz1kgayM9w1w/dUvhSaWi/S1GtNPmXPW4LR+U+cyzk8VgNh5OS3UFW6LIE31hbOO8dzhXDMha7JCOBgsZe2Xl6JY9xYce5KGJkhU/9JdcU5zr9LVYr4gXwAuJoaZ62f6SFxTK9lTANTk867U=
