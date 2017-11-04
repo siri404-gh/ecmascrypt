@@ -86,10 +86,11 @@
     "firebase:build": "./node_modules/.bin/webpack --config=./webpack/webpack.config.js --env=firebase",
     "firebase-deploy": "./node_modules/.bin/firebase deploy --token $FIREBASE_TOKEN",
 
-    "cleanup": "./node_modules/.bin/rimraf android/app/src/main/assets android ios output TMPDIR/react-* node_modules && yarn",
+    "cleanup": "./node_modules/.bin/rimraf android ios output TMPDIR/react-* node_modules && yarn && yarn eject",
+
     "eject": "react-native eject",
     "bundle": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
-    "bundle:mobile": "yarn cleanup && yarn eject && mkdir android/app/src/main/assets && yarn bundle && yarn cleanup",
+    "sanity:mobile": "yarn cleanup && mkdir android/app/src/main/assets && yarn bundle && yarn cleanup",
     "start:mobile:server": "node node_modules/react-native/local-cli/cli.js start -- --reset-cache",
     "start:mobile:dev": "react-native run-android",
     "start:mobile:dev:ios": "react-native run-ios",
