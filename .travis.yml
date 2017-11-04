@@ -26,9 +26,12 @@ after_success:
 - test "$TRAVIS_BRANCH" = "master" && yarn docker:push
 - test "$TRAVIS_BRANCH" = "master" && yarn heroku:deploy
 deploy:
+  edge: true
   provider: bluemixcloudfoundry
+  manifest: config/manifest.yml          # (optional)  Defaults to manifest.yml.
+  region: eu-gb                        # (optional)  [ng, eu-gb , au-syd] Defaults to US South region (ng).
+  api: https://api.ng.bluemix.net
   skip_cleanup: true
-  manifest: manifest.yml
   username: $BLUEMIX_USER
   password: $BLUEMIX_PASSWORD
   organization: $BLUEMIX_ORGANIZATION
