@@ -1,7 +1,7 @@
 applications:
 - path: ..
-  memory: 256M
+  memory: 1024M
   instances: 1
   name: ecmascrypt
   host: ecmascrypt
-  disk_quota: 1024M
+  disk_quota: 2048M
