@@ -80,7 +80,7 @@
     "storybook": "./node_modules/.bin/start-storybook -p 6006",
     "lint": "mkdir -p output/reports/.eslint && ./node_modules/.bin/eslint . -c=config/.eslintrc --ignore-path=config/.eslintignore -o=output/reports/.eslint/index.html -f=html",
     "pa11y": "mkdir -p ./output/reports/.pa11y && ./node_modules/.bin/pa11y-ci --config config/.pa11yrc --threshold 5 --json > ./output/reports/.pa11y/output.json",
-    "build-storybook": "build-storybook -o output/storybook",
+    "build-storybook": "build-storybook -o output/storybook -c config/storybook",
     "prod:build": "./node_modules/.bin/webpack --config=./webpack/webpack.config.js --env=prod",
     "firebase:build": "./node_modules/.bin/webpack --config=./webpack/webpack.config.js --env=firebase",
     "firebase-deploy": "./node_modules/.bin/firebase deploy --token $FIREBASE_TOKEN",
