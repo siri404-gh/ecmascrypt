@@ -59,6 +59,7 @@ The ultimate pipeline boilerplate
 * :white_check_mark: React
 * :white_check_mark: React Native
 * :white_check_mark: Redux
+* :white_check_mark: Storybook
 * :white_check_mark: JSDoc
 * :white_check_mark: Express + Morgan
 * :white_check_mark: Webpack
