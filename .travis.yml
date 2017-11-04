@@ -3,8 +3,8 @@ language: node_js
 node_js:
 - '7'
 before_install:
-- test "$TRAVIS_BRANCH" = "master" && yarn docker:build
-- test "$TRAVIS_BRANCH" = "master" && yarn docker:run
+- if [ "$TRAVIS_BRANCH" == "master" ]; then yarn docker:build; fi
+- if [ "$TRAVIS_BRANCH" == "master" ]; then yarn docker:run; fi
 - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2
 - export PATH="$HOME/.yarn/bin:$PATH"
 - export CHROME_BIN=/usr/bin/google-chrome

@@ -1,0 +1,37 @@
+The Gitflow workflow
+Git rebase
+Basics of Redux
+Redux Middlewares
+Redux Thunks
+React Native
+Unit Testing
+PWA
+Linting
+Static type checking
+Webpack
+Achieving a linear history in gitflow workflow
+Deploying a hello world app into heroku
+Deploying a hello world app into firebase
+Deploying a hello world app into bluemix
+Deploying a nodejs app into heroku
+Deploying a nodejs app into bluemix
+Deploying a docker container into heroku
+Deploying a docker container into bluemix
+Deploying to Github Pages
+Convert your github repo into a website
+Components in a CI-CD architecture
+Integrating Code Quality Reports
+Integrating Code Coverage Reports
+Integrating Pa11y Reports
+Integrating Sitespeed Reports
+Integrating Snyk Reports
+Integrating Esdocs
+Integrating Storybook
+Integrating BDD
+Integrating Browserstack
+Integrating Saucelabs
+Integrating with Slack
+Building using Travis CI
+Creating a node server with Express and morgan
+Helmet
+Authentication with Passport
