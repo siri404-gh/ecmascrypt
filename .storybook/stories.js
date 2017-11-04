@@ -5,11 +5,11 @@ import Loader from '../src/lib/loader/loader';
 import Header from '../src/lib/header/header';
 
 storiesOf('Loader', module)
-.add('with text', () => (
-  <Loader>Hello Button</Loader>
-));
+  .add('with text', () => (
+    <Loader>Hello Button</Loader>
+  ));
 
 storiesOf('Header', module)
-.add('with text', () => (
-  <Header>Hello Button</Header>
-));
+  .add('with text', () => (
+    <Header>Hello Button</Header>
+  ));

@@ -77,6 +77,9 @@ The ultimate pipeline boilerplate
 * :white_check_mark: Eslint
 * :white_check_mark: Editorconfig
 * :white_check_mark: Slack notification from - Github/Travis/Docker/Heroku
+* Snyk
+* Helmet
+* OpenStack
 * Bootstrap
 * Material UI
 * Socket.io
