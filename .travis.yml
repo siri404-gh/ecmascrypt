@@ -16,6 +16,7 @@ before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 # - sh travis/install_chrome.sh
+- npm install -g snyk
 install:
 - yarn
 - snyk protect
@@ -26,6 +27,7 @@ script:
 services:
 - docker
 after_success:
+- snyk monitor
 - yarn firebase-deploy
 - test "$TRAVIS_BRANCH" = "master" && yarn docker:build:heroku
 - test "$TRAVIS_BRANCH" = "master" && yarn docker:login
