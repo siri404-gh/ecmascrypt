@@ -98,7 +98,8 @@
     "docker:run:heroku": "docker run -p 5000:5000 -d $DOCKER_REPO",
     "docker:login": "docker login -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD",
     "docker:push": "docker push $DOCKER_REPO",
-    "heroku:deploy": "sh ./travis/deploy_heroku.sh",
+    "heroku:deploy": "sh ./travis/heroku_deploy.sh",
+    "bluemix:deploy": "sh ./travis/bluemix_deploy.sh",
     "figlet": " ./node_modules/.bin/figlet --f 'Straight'",
     "start": "npm run prod:build && ./node_modules/.bin/rimraf src config && node server/server",
     "travis": "yarn flow && yarn lint && yarn test && yarn cucumber && yarn pa11y && yarn sitespeed && npm run docs && npm run build-storybook && yarn prod:build && yarn report-coverage "
