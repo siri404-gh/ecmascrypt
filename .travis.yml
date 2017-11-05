@@ -15,8 +15,7 @@ services:
 - docker
 after_success:
 - yarn firebase-deploy
-- test "$TRAVIS_BRANCH" = "master" && yarn docker:login
-- test "$TRAVIS_BRANCH" = "master" && yarn docker:push
+- test "$TRAVIS_BRANCH" = "master" && yarn docker:login && yarn docker:push
 - test "$TRAVIS_BRANCH" = "master" && yarn heroku:deploy
 deploy:
   edge: true

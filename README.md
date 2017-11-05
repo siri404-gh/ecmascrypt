@@ -114,7 +114,7 @@ The ultimate pipeline boilerplate
 * BLUEMIX_ORGANIZATION
 * BLUEMIX_SPACE
 
-##Things to edit
+## Things to edit
 * Environment Variables
 * config/*
 * variables/*
