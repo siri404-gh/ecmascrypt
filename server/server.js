@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const helmet = require('helmet')
 const app = express();
 const { port, dist } = require('../variables/server');
 const { docs } = require('../variables/esdoc');
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(morgan('tiny'));
+app.use(helmet());
 
 app.use('/', express.static(dist));
 app.use('/docs', express.static(docs));

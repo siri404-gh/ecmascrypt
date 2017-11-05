@@ -1,7 +1,7 @@
 FROM node:latest
 WORKDIR /usr/src/app
 COPY package.json .
-RUN npm i express body-parser morgan
+RUN npm i express body-parser morgan helmet
 ADD output output
 ADD server server
 ADD variables variables
