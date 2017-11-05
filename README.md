@@ -113,3 +113,13 @@ The ultimate pipeline boilerplate
 * BLUEMIX_API_KEY
 * BLUEMIX_ORGANIZATION
 * BLUEMIX_SPACE
+
+##Things to edit
+* Environment Variables
+* config/*
+* variables/*
+* appName in variables/common.js
+* firebase.json
+* app.json
+* .firebaserc
+* service-worker.js

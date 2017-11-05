@@ -1,4 +1,5 @@
 module.exports = {
+  appName: 'ecmascrypt',
   src: './src',
   dist: './output/.dist',
   metaType: 'website',
