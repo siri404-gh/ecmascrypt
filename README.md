@@ -80,7 +80,7 @@ The ultimate pipeline boilerplate
 * "heroku:deploy": "sh ./travis/deploy_heroku.sh",
 * "figlet": " ./node_modules/.bin/figlet --f 'Straight'",
 * "start": "npm run docs && npm run build-storybook && npm run prod:build && node server/server",
-* "travis": "yarn flow && yarn lint && yarn test && yarn report-coverage && yarn cucumber yarn pa11y && yarn sitespeed && yarn firebase:build"
+* "travis": "yarn flow && yarn lint && yarn test && yarn cucumber && yarn pa11y && yarn sitespeed && yarn firebase:build && yarn report-coverage "
 
 # Docker commands
 * docker build -t sreeram/ecmascrypt .
@@ -123,3 +123,36 @@ The ultimate pipeline boilerplate
 * app.json
 * .firebaserc
 * service-worker.js
+
+## Build Process
+Git Push
+Github: Slack notification
+Travis Build Initiation
+Travis: Slack notification
+Travis: Docker build
+Travis: Docker run
+Travis: Chome install
+Travis: npm install
+Travis: flow
+Travis: lint
+Travis: Unit Tests
+Travis: Cucumber/Browserstack
+Travis: Pa11y
+Travis: Sitespeed
+Travis: Snyk
+Travis: Helmet
+Travis: Code Coverage Report
+Travis: Lint Report
+Travis: Cucumber Report
+Travis: Pa11y Report
+Travis: Sitespeed Report
+Travis: Snyk Report
+Travis: Helmet Report
+Travis: Firebase Build
+Travis: Firebase Deploy
+Travis: Docker push
+Docker Cloud: Slack Notification
+Travis: Heroku Push
+Heroku: Slack Notification
+Travis: Bluemix Push
+Bluemix: Slack Notification

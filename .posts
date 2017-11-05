@@ -2,9 +2,10 @@ The Gitflow workflow
 Git rebase
 Basics of Redux
 Redux Middlewares
-Redux Thunks
+Redux Thunk
 React Native
-Unit Testing
+Unit Testing using Karma + Jasmine
+Unit Testing using Jest
 PWA
 Linting
 Static type checking

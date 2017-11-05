@@ -92,14 +92,15 @@
     "start:mobile:dev": "react-native run-android",
     "start:mobile:dev:ios": "react-native run-ios",
     "test:mobile": "./node_modules/.bin/jest",
-    "docker:build": "docker build -t $DOCKER_REPO .",
+    "docker:build": "docker build -f Dockerfile.travis -t $DOCKER_REPO .",
+    "docker:build:heroku": "docker build -t $DOCKER_REPO . -f Dockerfile.heroku",
     "docker:run": "docker run -p 5000:5000 -d $DOCKER_REPO",
     "docker:login": "docker login -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD",
     "docker:push": "docker push $DOCKER_REPO",
     "heroku:deploy": "sh ./travis/deploy_heroku.sh",
     "figlet": " ./node_modules/.bin/figlet --f 'Straight'",
-    "start": "npm run docs && npm run build-storybook && npm run prod:build && node server/server",
-    "travis": "yarn flow && yarn lint && yarn test && yarn report-coverage && yarn cucumber yarn pa11y && yarn sitespeed && yarn firebase:build"
+    "start": "npm run docs && npm run build-storybook && npm run prod:build && ./node_modules/.bin/rimraf src config variables && node server/server",
+    "travis": "yarn flow && yarn lint && yarn test && yarn cucumber && yarn pa11y && yarn sitespeed && yarn firebase:build && yarn report-coverage "
   },
   "jest": {
     "preset": "react-native",
