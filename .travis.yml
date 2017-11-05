@@ -2,12 +2,24 @@ sudo: required
 language: node_js
 node_js:
 - '7'
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 before_install:
 - if [ "$TRAVIS_BRANCH" == "master" ]; then yarn docker:build; fi
 - if [ "$TRAVIS_BRANCH" == "master" ]; then yarn docker:run; fi
 - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2
 - export PATH="$HOME/.yarn/bin:$PATH"
-- sh travis/install_chrome.sh
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+# - sh travis/install_chrome.sh
+install:
+- yarn
+- snyk protect
+- snyk test
 cache: yarn
 script:
 - yarn travis
