@@ -101,10 +101,11 @@
     "docker:login": "docker login -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD",
     "docker:push": "docker push $DOCKER_REPO",
     "heroku:deploy": "sh ./travis/heroku_deploy.sh",
+    "bluemix:push": "sh ./travis/bluemix_push.sh",
     "bluemix:deploy": "sh ./travis/bluemix_deploy.sh",
     "figlet": " ./node_modules/.bin/figlet --f 'Straight'",
     "start": "npm run prod:build && ./node_modules/.bin/rimraf src config && node server/server",
-    "travis": "yarn flow && yarn lint && yarn test && yarn cucumber && yarn pa11y && yarn sitespeed && npm run docs && npm run build-storybook && yarn prod:build && yarn report-coverage "
+    "travis": "yarn flow && yarn lint && yarn test && yarn cucumber && yarn pa11y && yarn sitespeed && yarn docs && yarn build-storybook && yarn prod:build && yarn report-coverage "
   },
   "jest": {
     "preset": "react-native",
