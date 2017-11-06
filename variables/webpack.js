@@ -15,6 +15,6 @@ module.exports = {
     htmlTemplateTitle: 'Firebase Title',
   },
   heroku: {
-    htmlTemplateTitle: 'Heroku Title',
+    htmlTemplateTitle: 'Production Title',
   }
 };
