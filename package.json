@@ -53,7 +53,7 @@
     "react-redux": "^5.0.6",
     "react-test-renderer": "^16.0.0",
     "rimraf": "^2.6.2",
-    "selenium-webdriver": "2.53.2",
+    "selenium-webdriver": "3.0.0",
     "sitespeed.io": "^5.6.4",
     "style-loader": "^0.19.0",
     "snyk": "^1.47.0",
