@@ -1,4 +1,19 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.12.0
 ignore: {}
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:mime:20170907':
+    - sitespeed.io > s3 > mime:
+        patched: '2018-06-26T00:44:30.290Z'
+    - react-native > connect > serve-static > send > mime:
+        patched: '2018-06-26T00:44:30.290Z'
+  'npm:tunnel-agent:20170305':
+    - sitespeed.io > browsertime > alto-saxophone > download > caw > tunnel-agent:
+        patched: '2018-06-26T00:44:30.290Z'
+    - sitespeed.io > browsertime > soprano-saxophone > download > caw > tunnel-agent:
+        patched: '2018-06-26T00:44:30.290Z'
+    - sitespeed.io > webcoach > browsertime > soprano-saxophone > download > caw > tunnel-agent:
+        patched: '2018-06-26T00:44:30.290Z'
+    - sitespeed.io > webcoach > browsertime > alto-saxophone > download > caw > tunnel-agent:
+        patched: '2018-06-26T00:44:30.290Z'
