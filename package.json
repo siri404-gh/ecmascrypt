@@ -56,7 +56,7 @@
     "selenium-webdriver": "2.53.2",
     "sitespeed.io": "^5.6.4",
     "style-loader": "^0.19.0",
-    "snyk": "^1.47.0",
+    "snyk": "^1.49.5",
     "url-loader": "^0.5.9",
     "webpack": "^3.8.1",
     "webpack-build-notifier": "^0.1.16",
@@ -105,7 +105,9 @@
     "bluemix:deploy": "sh ./travis/bluemix_deploy.sh",
     "figlet": " ./node_modules/.bin/figlet --f 'Straight'",
     "start": "npm run prod:build && ./node_modules/.bin/rimraf src config && node server/server",
-    "travis": "yarn flow && yarn lint && yarn test && yarn cucumber && yarn pa11y && yarn sitespeed && yarn docs && yarn build-storybook && yarn prod:build && yarn report-coverage "
+    "travis": "yarn flow && yarn lint && yarn test && yarn cucumber && yarn pa11y && yarn sitespeed && yarn docs && yarn build-storybook && yarn prod:build && yarn report-coverage ",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "jest": {
     "preset": "react-native",
@@ -116,5 +118,6 @@
   "engines": {
     "node": "7.6.0",
     "npm": "4.1.2"
-  }
+  },
+  "snyk": true
 }
